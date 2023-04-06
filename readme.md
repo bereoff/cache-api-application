@@ -18,8 +18,8 @@ The data for this project is from https://fakerapi.it/en.
 
 The Redis stack runs from a docker environment.
 
--Redis port: 6379
--Redisinsight port: 8001
+- Redis port: 6379
+- Redisinsight port: 8001
 
 #### FastAPI
 
