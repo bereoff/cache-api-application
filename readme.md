@@ -9,7 +9,7 @@ For this project the stack is:
 The data for this project is from https://fakerapi.it/en.
 
 ### The basic architecture is:
-![Project architecture](/.github/Cache-Api-App-Architecture.png)
+![Project architecture](https://github.com/bereoff/cache-api-application/blob/main/Cache-Api-App-Architecture.png)
 
 ### About services:
 
