@@ -53,8 +53,8 @@ After this disclaimer, to start the server properly is necessary to run this com
 - uvicorn app:app --host=localhost --port=8000 --reload
 
 Now, and if the previous steps were concluded without errors, if you access the urls:
--http://localhost:8001/ [Redisinsight UI]
--http://localhost:8000/docs [FastAPI swagger]
+- http://localhost:8001/ [Redisinsight UI]
+- http://localhost:8000/docs [FastAPI swagger]
 
 
 
