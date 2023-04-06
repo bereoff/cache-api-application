@@ -28,7 +28,7 @@ It was decide to run locally, installing in a virtual environment along with the
 
 ### Project Structure
 
-![Project directories structure](/.github/project_directory_structure.png)
+![Project directories structure](https://github.com/bereoff/cache-api-application/blob/main/project_directory_structure.png)
 
 To run this project as it was concepted, is it necessary to previosly install Docker and Docker Compose (more info: [Docker](https://docs.docker.com/engine/install/)).
 
