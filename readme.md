@@ -9,6 +9,7 @@ For this project the stack is:
 The data for this project is from https://fakerapi.it/en.
 
 ### The basic architecture is:
+
 ![Project architecture](https://github.com/bereoff/cache-api-application/blob/main/Cache-Api-App-Architecture.png)
 
 ### About services:
@@ -28,7 +29,10 @@ It was decide to run locally, installing in a virtual environment along with the
 
 ### Project Structure
 
-![Project directories structure](https://github.com/bereoff/cache-api-application/blob/main/project_directory_structure.png)
+<p align="center">
+  <img src="https://github.com/bereoff/cache-api-application/blob/main/project_directory_structure.png" />
+</p>
+
 
 To run this project as it was concepted, is it necessary to previosly install Docker and Docker Compose (more info: [Docker](https://docs.docker.com/engine/install/)).
 
