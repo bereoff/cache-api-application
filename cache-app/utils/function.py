@@ -68,9 +68,11 @@ def get_user_from_cache(key: str) -> dict:
     id = IdModel(id=key).id
 
     user = conn.get(id)
-    user = json.loads(user.decode("utf-8"))
+    if user:
+        user = json.loads(user.decode("utf-8"))
+        return user
 
-    return user
+    return False
 
 
 def set_user_to_cache(key: str, value: str) -> tuple:
@@ -80,15 +82,14 @@ def set_user_to_cache(key: str, value: str) -> tuple:
 
     state = conn.setex(
         id,
-        timedelta(seconds=3600),
-        value=json.dumps(value), )
+        timedelta(seconds=86400),
+        value=json.dumps(value),
+        )
 
     try:
-        val = get_user_from_cache(id)
-
-        if val:
-
-            return (val, state)
+        user = get_user_from_cache(id)
+        if user:
+            return (user, state)
     except Exception:
         NoResultFound()
 
@@ -104,12 +105,14 @@ def get_users(id: str = None):
 
         data = get_users_from_api()
         if data:
-            user = [user for user in data if id == data['id']]
+            user = [user for user in data if id == user['id']]
 
-            state = set_user_to_cache(key=id, value=user[0])
+            ingestion = set_user_to_cache(key=id, value=user[0])
+            print("ingestion: ", ingestion)
 
-            if state:
-                return data
+            if ingestion:
+                print("user from ingestion: ", ingestion[1])
+                return ingestion[0]
     data = get_users_from_api()
 
     return data
