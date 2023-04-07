@@ -111,7 +111,6 @@ def get_users(id: str = None):
             print("ingestion: ", ingestion)
 
             if ingestion:
-                print("user from ingestion: ", ingestion[1])
                 return ingestion[0]
     data = get_users_from_api()
 
