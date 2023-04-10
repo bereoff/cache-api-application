@@ -107,11 +107,14 @@ def get_users(id: str = None):
         if data:
             user = [user for user in data if id == user['id']]
 
-            ingestion = set_user_to_cache(key=id, value=user[0])
-            print("ingestion: ", ingestion)
+            if user:
 
-            if ingestion:
-                return ingestion[0]
+                ingestion = set_user_to_cache(key=id, value=user[0])
+
+                if ingestion:
+                    return ingestion[0]
+            raise HTTPException(status_code=404, detail="User not found")
+
     data = get_users_from_api()
 
     return data
