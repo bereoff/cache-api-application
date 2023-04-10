@@ -41,7 +41,7 @@ async def get_user_by_id(id: str) -> str:
     id = IdModel(id=id).id
 
     user = function.get_users(id)
-
+    print(user)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 
