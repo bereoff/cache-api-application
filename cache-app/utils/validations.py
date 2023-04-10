@@ -11,6 +11,12 @@ class IdModel(BaseModel):
             raise ValueError("Invalid id")
         return v
 
+    @validator('id')
+    def is_a_number(cls, v):
+        if v.isdigit():
+            return v
+        raise ValueError("Id is not a number!")
+
     class Config:
         min_anystr_length = 1
         error_msg_templates = {
