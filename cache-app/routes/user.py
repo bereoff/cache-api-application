@@ -2,7 +2,7 @@
 import json
 
 from db import Redis
-from fastapi import APIRouter
+from fastapi import APIRouter, Response
 from fastapi.exceptions import HTTPException
 # from pydantic import ValidationError
 from utils import function  # get_users_from_api, set_user_to_cache
@@ -34,18 +34,20 @@ async def check_data_in_redis() -> list[dict]:
         return [{"ingestion": {"status": 201}}]
 
 
-@router.get("/user/{id}/", status_code=200, response_model=UserModel)
-async def get_user_by_id(id: str) -> str:
+@router.get("/user/{id}/", status_code=200, response_model=None)
+async def get_user_by_id(id: str) -> Response | dict:
     """Get user by username"""
+    if id.isdigit():
+        id = IdModel(id=id).id
 
-    id = IdModel(id=id).id
+        user = function.get_users(id)
+        print(user)
+        if not user:
+            raise HTTPException(status_code=404, detail="User not found")
 
-    user = function.get_users(id)
-    print(user)
-    if not user:
-        raise HTTPException(status_code=404, detail="User not found")
+        return user
 
-    return user
+    return {"msg": f"The id '{id}' is not a number.", "status code": 400}
 
 
 # TODO: Criar view para filtar por primeiro nome
