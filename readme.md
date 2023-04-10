@@ -49,7 +49,7 @@ To run this project as it was concepted, is it necessary to previosly install Do
 
 After the previous steps concluded, is time to run the uvicorn server (all this flow is based on a development environment approach). For a production environment, others steps are necessary to give a more robustness and security when you will deploy the project in a cloud/on-premise server.
 
-After this consideration, to start the server properly is necessary to run this command:
+After this consideration, to start the server properly is necessary to run this command inside ./cache-app:
 - uvicorn app:app --host=localhost --port=8000 --reload
 
 Now, and if the previous steps were concluded without errors, if you access the follow urls, you will get the service UIs:
