@@ -8,11 +8,11 @@ For this project the stack is:
 
 The data for this project is from https://fakerapi.it/en.
 
-### The basic architecture is:
+> ### The basic architecture is:
 
 ![Project architecture](https://github.com/bereoff/cache-api-application/blob/main/Cache-Api-App-Architecture.png)
 
-### About the services:
+> ### About the services:
 
 #### Redis and Redisinsight 
 
@@ -27,7 +27,7 @@ It was decide to run locally, installing in a virtual environment along with the
 
 ## Run Application
 
-### Project Structure
+> ### Project Structure
 
 <p align="center">
   <img src="https://github.com/bereoff/cache-api-application/blob/main/project_directory_structure.png" />
@@ -36,7 +36,7 @@ It was decide to run locally, installing in a virtual environment along with the
 
 To run this project as it was concepted, is it necessary to previosly install Docker and Docker Compose (more info: [Docker](https://docs.docker.com/engine/install/)).
 
-### Steps
+> ### Steps
 * Start/Run Redis Docker services: docker-compose up (After docker and docker compose installed) to pull (if you don't have any Redis/Redisinsight local image) Redis and Redisinsight images and start the containers from the services.
   
 * Create a virtual environment: There are many possibilities to create a Python virtual environment, but I will use the built-in Python way:
