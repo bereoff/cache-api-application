@@ -1,7 +1,7 @@
 redis
 httpx
 fastapi[all]
-dynaconf
 flake8
 autopep8
+
 
