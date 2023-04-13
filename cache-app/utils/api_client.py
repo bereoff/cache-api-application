@@ -59,7 +59,7 @@ def get_data_from_redis(key: str) -> dict:
     """Get data from redis."""
 
     id = IdModel(id=key).id
-    
+
     book = get_redis_conn().get(id)
     if book:
         book = json.loads(book.decode("utf-8"))
