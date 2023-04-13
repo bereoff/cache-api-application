@@ -1,12 +1,11 @@
+from pydantic import BaseSettings
 
-"""Settings module"""
 
-from dynaconf import Dynaconf
+class Settings(BaseSettings):
+    app_name = "cache-app"
+    version = "0.1.0",
+    description = "Cache app is an application to get data from any source and cache on redis",  # noqaE501
+    api_url: str
 
-settings = Dynaconf(
-    envvar_prefix="cache_app",
-    settings_files=["settings.toml", ],
-    environments=["development", "production", "testing"],
-    env_switcher="api_cache_env",
-    load_dotenv=False,
-)
+    class Config:
+        env_file = ".env"
