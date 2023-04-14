@@ -42,7 +42,7 @@ To run this project as it was concepted, is it necessary to previosly install Do
 * Create a virtual environment: There are many possibilities to create a Python virtual environment, but I will use the built-in Python way:
   - In your project root folder (./cache-data-app):
     ```
-      python3 -m venv <env_name>
+      python3 -m venv .venv
     ```
   - Depending on what OS you are using, will need a different way to activate you python virtual environt, in my case it's an OS  based on Linux.
     ```
