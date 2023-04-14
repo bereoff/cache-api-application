@@ -44,7 +44,7 @@ To run this project as it was concepted, is it necessary to previosly install Do
     ```
       python3 -m venv .venv
     ```
-  - Depending on what OS you are using, will need a different way to activate you python virtual environt, in my case it's an OS  based on Linux.
+  - Depending on what OS you are using, you will need a different way to activate your python virtual environment. In my case it's a Linux OS.
     ```
       source <env_name>/bin/activate
     ```
