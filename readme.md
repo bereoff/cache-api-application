@@ -3,8 +3,8 @@
 The proposal of this project is to demonstrate the main concepts of an architecture the gets data from a generic source and ingests it on a cache structure.
 
 For this project the stack is:
-- FastAPI
-- Redis
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Redis](https://redis.io/docs/getting-started/)
 
 The data for the project are from https://fakerapi.it/en.
 
