@@ -34,7 +34,7 @@ FastAPI runs locally, from a virtual environment along with the other Python's d
 </p>
 
 
-To run this project as it was concepted, is it necessary to previosly install Docker and Docker Compose (more info: [Docker](https://docs.docker.com/engine/install/)).
+To run this project as it was concepted, it is necessary previosly to install Docker and Docker Compose (more info: [Docker](https://docs.docker.com/engine/install/)).
 
 > ### Steps
 * Start/Run Redis Docker services: docker-compose up (After docker and docker compose installed) to pull (if you don't have any Redis/Redisinsight local image) Redis and Redisinsight images and start the containers from the services.
