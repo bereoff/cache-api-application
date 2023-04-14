@@ -23,7 +23,7 @@ The Redis stack runs from a docker environment.
 
 #### FastAPI
 
-It was decide to run locally, installing in a virtual environment along with the other Python's dependencies (requirements.txt file).
+FastAPI runs locally, from a virtual environment along with the other Python's dependencies (requirements.txt file).
 
 ## Run Application
 
