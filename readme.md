@@ -1,12 +1,12 @@
 ## Cache Api Application
 
-The proposal of this project is to study the main concepts of an architecture the gets data from a generic source and ingests it on a cache structure.
+The proposal of this project is to demonstrate the main concepts of an architecture the gets data from a generic source and ingests it on a cache structure.
 
 For this project the stack is:
 - FastAPI
 - Redis
 
-The data for this project is from https://fakerapi.it/en.
+The data for the project are from https://fakerapi.it/en.
 
 > ### The basic architecture is:
 
