@@ -42,21 +42,21 @@ To run this project as it was concepted, it is necessary previosly to install Do
 * Create a virtual environment: There are many possibilities to create a Python virtual environment, but I will use the built-in Python way:
   - In your project root folder (./cache-data-app):
     ```
-      python3 -m venv .venv
+      $ python3 -m venv .venv
     ```
   - Depending on what OS you are using, you will need a different way to activate your python virtual environment. In my case it's a Linux OS.
     ```
-      source <env_name>/bin/activate
+      $ source <env_name>/bin/activate
     ```
   - Install requirements (after a virtual environment activated):
     ```
-      python3 -m pip install -r requirements.txt
+      $ python3 -m pip install -r requirements.txt
     ```
 After the previous steps concluded, is time to run the uvicorn server (all this flow is based on a development environment approach). For a production environment, others steps are necessary to give a more robustness and security when you will deploy the project in a cloud/on-premise server.
 
 After this consideration, to start the server properly is necessary to run this command in the same level as app.py file (inside cache-app folde):
 ```
-  uvicorn main:app --host=localhost --port=8000 --reload
+  $ uvicorn main:app --host=localhost --port=8000 --reload
 ```
 
 Now, and if the previous steps were concluded without errors, if you access the follow urls, you will get the service UIs:
